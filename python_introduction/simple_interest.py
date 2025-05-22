@@ -1,4 +1,4 @@
-simple interest
+#simple interest
 
 #Define the three variables
 principal = 1000 #representing $1000
