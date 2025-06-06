@@ -1,0 +1,36 @@
+#Personal Daily Reminder
+
+#Use of conditional statements, match case and loops
+#to remind users about a single, priority task for the day
+#based on time sensitivity
+
+#prompt for a single task
+#prompt for task description
+task = input("What is the task decription:")
+
+#prompt for task's priority
+priority = input("Task priority (high/medium/low):").strip().lower()
+
+#prompt for time bound
+time_bound = input("Is it time-bound? (yes/no):").strip().lower()
+
+#process the task based on priority and time sensitivity
+#using a match case statement
+
+match priority:
+	case "high":
+		msg = f"High priority task - {task}"
+	case "medium":
+		msg = f"Medium priority task - {task}"
+	case "low":
+		msg = f"Low priority task - {task}"
+	case " ":
+		print("Unknown priority")
+
+#time bound urgency
+if time_bound == "yes":
+	print(f"{msg} requires immediate attention today!")
+elif time_bound == "no":
+	print(f"{msg}: Consider completing it when you have free time.")
+else:
+	print("No priority assigned")
