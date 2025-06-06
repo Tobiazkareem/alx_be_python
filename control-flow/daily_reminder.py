@@ -6,13 +6,13 @@
 
 #prompt for a single task
 #prompt for task description
-task = input("What is the task decription:")
+task = input("Enter your task: ")
 
 #prompt for task's priority
-priority = input("Task priority (high/medium/low):").strip().lower()
+priority = input("Priority (high/medium/low): ").strip().lower()
 
 #prompt for time bound
-time_bound = input("Is it time-bound? (yes/no):").strip().lower()
+time_bound = input("Is it time-bound? (yes/no): ").strip().lower()
 
 #process the task based on priority and time sensitivity
 #using a match case statement
