@@ -19,17 +19,17 @@ time_bound = input("Is it time-bound? (yes/no): ").strip().lower()
 
 match priority:
 	case "high":
-		msg = f"High priority task - {task}"
+		msg = f"Reminder: {task} is a high priority task"
 	case "medium":
 		msg = f"Medium priority task - {task}"
 	case "low":
-		msg = f"Low priority task - {task}"
+		msg = f"Note: {task} is a low priority task."
 	case " ":
 		print("Unknown priority")
 
 #time bound urgency
 if time_bound == "yes":
-	print(f"{msg} requires immediate attention today!")
+	print(f"{msg} that requires immediate attention today!")
 elif time_bound == "no":
 	print(f"{msg}: Consider completing it when you have free time.")
 else:
