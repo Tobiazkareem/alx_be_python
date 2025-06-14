@@ -16,7 +16,7 @@ def perform_operation(num1, num2, operation):
 			#divide two values
 			if num2 == 0:
 				print("Cant be divisible by 0")
-			else:
+			elif:
 				return num1 / num2
 		case _:
 			print("Invalid operation")
