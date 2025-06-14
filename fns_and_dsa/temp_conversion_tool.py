@@ -31,7 +31,7 @@ def main():
 			raise ValueError("Invalid unit. Use 'C' for Celsius or 'F' for Fahrenheit")
 
 	except ValueError as e:
-		print(f"Invalid temperature. {e}")
+		print(f"Invalid temperature. Please enter a numeric value.")
 
 if __name__ == "__main__":
 	main()
