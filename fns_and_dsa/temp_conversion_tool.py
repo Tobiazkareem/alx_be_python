@@ -12,17 +12,18 @@ def convert_to_fahrenheit(celsius):
 	return (celsius * CELSIUS_TO_FAHRENHEIT_FACTOR) + 32
 
 def main():
-	temp_input = input("Enter the temperature (e.g., 100F or 37C): ").strip().upper()
-
 	try:
+		temp_input = input("Enter the temperature to convert: ").strip().upper()
+		unit = input("Is this temperature in Celsius or Fahrenheit? (C/F): ").strip().upper()
+		
 		#extract numeric value and unit
-		if temp_input.endswith('F'):
-			value = float(temp_input[:-1])
+		value = float(temp_input)
+
+		if unit = 'F':
 			result = convert_to_celsius(value)
 			print(f"{value}F is {round(result, 2)}C")
 
-		elif temp_input.endswith('C'):
-			value = float(temp_input[:-1])
+		elif unit = 'C':
 			result = convert_to_fahrenheit(value)
 			print(f"{value}C is {round(result, 2)}F")
 
