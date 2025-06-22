@@ -24,7 +24,7 @@ class Book:
 
 class Library:
 	def __init__(self):
-		self.books = [] # private list of book objects
+		self._books = [] # private list of book objects
 
 	def add_book(self, book):
 		self._books.append(book)
