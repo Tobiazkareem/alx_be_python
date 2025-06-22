@@ -4,7 +4,7 @@ import unittest
 from simple_calculator import SimpleCalculator
 
 #Define a Test Class
-class TestSimpleCalculator(unittest.Testcase):
+class TestSimpleCalculator(unittest.TestCase):
 
 #create test methods for each operations
 	def setUp(self):
@@ -15,17 +15,19 @@ class TestSimpleCalculator(unittest.Testcase):
 		"""Test the addition method."""
 		self.assertEqual(self.calc.add(2, 3), 5)
 		self.assertEqual(self.calc.add(-1, 1), 0)
-		#Add more assertions to thoroughly test the add method.
+		self.assertEqual(self.calc.add(0, 0), 0)
 
 	def test_subtraction(self):
 		"""Test the substraction method."""
-		self.assertEqual(self.calc.substract(3, 2), 1)
-		self.assertEqual(self.calc.substract(5, 6), -1)
+		self.assertEqual(self.calc.subtract(4, 2), 2)
+		self.assertEqual(self.calc.subtract(5, 6), -1)
+		self.assertEqual(self.calc.subtract(10, 10), 0)
 
 	def test_multiplication(self):
 		"""Test the multiplication method."""
 		self.assertEqual(self.calc.multiply(2, 3), 6)
 		self.assertEqual(self.calc.multiply(8, 2), 16)
+		self.assertEqual(self.calc.multiply(0, 4), 0)
 
 	def test_division(self):
 		"""Test various division..."""
@@ -37,5 +39,5 @@ class TestSimpleCalculator(unittest.Testcase):
 		self.assertEqual(self.calc.divide(0, 5), 0)
 		self.assertIsNone(self.calc.divide(0, 0), "0 divided by 0 should return None")
 
-if __name__ == '__main__':
+if __name__ == "__main__":
 	unittest.main()	
